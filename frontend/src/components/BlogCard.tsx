@@ -48,10 +48,17 @@ export const BlogCard = ({
 }
 
 
-export function Avatar({ name, size = 6, textSize = "sm" }: { name : string, size? : number, textSize? : string }){
-    return <div>
-        <div className={`relative inline-flex items-center justify-center w-${size} h-${size} overflow-hidden bg-gray-300 rounded-full dark:bg-gray-600`}>
-            <span className={`font-medium text-${textSize} text-gray-600 dark:text-gray-300`}>{ name[0] }</span>
+export function Avatar({ name, size = "sm", textSize = "sm" }: { name: string, size?: string, textSize?: string }) {
+    const sizeClasses = size === "lg" ? "w-10 h-10" : "w-6 h-6";
+    const textSizeClasses = textSize === "lg" ? "text-lg" : "text-sm";
+
+    return (
+        <div>
+            <div className={`relative inline-flex items-center justify-center ${sizeClasses} overflow-hidden bg-gray-300 rounded-full dark:bg-gray-600`}>
+                <span className={`font-medium ${textSizeClasses} text-gray-600 dark:text-gray-300`}>
+                    {name[0]}
+                </span>
+            </div>
         </div>
-    </div>
+    );
 }

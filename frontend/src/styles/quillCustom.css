@@ -1,0 +1,18 @@
+/* styles/quill-custom.css */
+
+.ql-editor {
+    font-size: 20px; /* Adjust font size as needed */
+}
+
+.ql-editor::before {
+    content: attr(data-placeholder);
+    color: #888;
+    position: relative;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.5;
+    font-family: serif;
+}
+

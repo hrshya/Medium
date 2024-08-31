@@ -17,7 +17,7 @@ export const FullBlog = ({ blog }: { blog : Blog }) => {
                             <div className="text-slate-500 font-thin pt-2">
                                 Post on 2nd December 2023
                             </div>
-                            <div className="pt-4 text-slate-900">
+                            <div className="pt-4 text-slate-700 font-serif text-[20px]">
                                 { blog.content }
                             </div>
                         </div>
@@ -28,7 +28,7 @@ export const FullBlog = ({ blog }: { blog : Blog }) => {
                             </div>
                             <div className="flex">
                                 <div className="pr-4 flex flex-col justify-center">
-                                    <Avatar size={10} textSize={"md"} name={blog.author.name || "Anonymous"} />
+                                    <Avatar size={"lg"} textSize={"md"} name={blog.author.name || "Anonymous"} />
                                 </div>
                                 <div>
                                     <div className="text-xl font-bold">
