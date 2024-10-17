@@ -28,7 +28,7 @@ export const Publish = () => {
         try {
             const response = await axios.post(`${BACKEND_URL}/api/v1/blog`, {
                 title,
-                content: sanitizedContent
+                content: sanitizedContent // Send sanitized content to backend
             }, {
                 headers: {
                     Authorization: localStorage.getItem("token")

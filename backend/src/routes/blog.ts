@@ -143,10 +143,11 @@ blogRouter.get('/:id', async (c) => {
         return c.json({
             blog
         });
+
     } catch(e) {
         c.status(411); // 4
         return c.json({
             message: "Error while fetching blog post"
         });
     }
-})
+}) 
